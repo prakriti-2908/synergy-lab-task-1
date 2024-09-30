@@ -1,0 +1,33 @@
+.user-form{
+    form{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 10% auto;
+        justify-content: center;
+        gap: 1rem;
+
+        input{
+            font-size: large;
+        }
+    }
+}
+
+// for mobile screen
+@media only screen and (max-width: 767px){
+    .home{
+        table{
+            margin-left: 0rem;
+            td,th{
+                font-size: small;
+                padding: 0.5rem !important;
+        
+                button{
+                    font-size: small !important;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

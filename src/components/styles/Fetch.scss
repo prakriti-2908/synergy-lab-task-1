@@ -1,0 +1,33 @@
+.home{
+    table{
+        max-width: 98%;
+        min-width: 98%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        tr{
+            th{
+                text-align: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            td{
+                text-align: justify;
+                padding-left: 0.5rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                button{
+                    border: none;
+                    background-color: transparent;
+                    text-align: center;
+                    cursor: pointer;
+                    padding-left: 0 !important;
+                    font-size: large;
+
+                    &:hover{
+                        color: rgb(180, 125, 231);
+                    }
+                }
+            }
+        }
+    }
+}

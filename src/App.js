@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Fetch from "./components/Fetch";
+import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserForm from "./components/UserForm";
+import { UserProvider } from "./components/UserContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        {/* UseProvider for providing context access to components*/}
+        <UserProvider>
+          <Routes>
+            <Route path="/" element={<Fetch />} />
+            <Route path="/user-form" element={<UserForm />} />
+          </Routes>
+        </UserProvider>
+      </div>
+    </BrowserRouter>
   );
 }
 
